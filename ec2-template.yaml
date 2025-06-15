@@ -1,0 +1,13 @@
+  AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0c55b159cbfafe1f0
+      KeyName: my-key
+      SecurityGroups:
+        - default
+      Tags:
+        - Key: Name
+          Value: MultiServiceEC2
